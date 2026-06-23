@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ananya Shetty Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Ananya Shetty</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+<div class="one-third js-fullheight order-md-last img"
+     style="background-image:url(images/bg_me.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            width: 55%;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Ananya Shetty</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+
+'Data Analyst',
+'Python Developer',
+'Aspiring Software Engineer',
+'2026 Graduate',
+' ISE Student'
+
+
+];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2><h2>Data Analyst </h2>
+					<h2>Aspiring Software Engineer</h2></h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/ananya-r-shetty-240919268" class="btn btn-primary py-3 px-4">Linkdin</a> 
+							<a href="https://github.com/Shetty-ANANYA-Raju" class="btn btn-white btn-outline-white py-3 px-4">Git Hub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about.jpeg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Ananya Shetty</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Aspiring Data Analyst and Software developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Front End Development</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Final-year Information Science Engineering student at Dayananda Sagar Academy of Technology and Management,Bangalore. Passionate about Data Analytics, Business Intelligence, SQL, Python, Power BI and Software Development.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analyst & Software Developer</span></li>
+
+<li class="d-flex"><span>Domain:</span> <span>Data Analytics/Data Science, Business Intelligence & Web Development</span></li>
+
+<li class="d-flex"><span>Education:</span> <span>B.E. Information Science & Engineering</span></li>
+
+<li class="d-flex"><span>Language:</span> <span>English, Kannada, Hindi</span></li>
+
+<li class="d-flex"><span>Tools:</span> <span>Power BI, Excel, MySQL, Git, GitHub, Jupyter Notebook</span></li>
+
+<li class="d-flex"><span>Programming:</span> <span>Python, SQL, Java, JavaScript</span></li>
+
+<li class="d-flex"><span>Data Analysis:</span> <span>Pandas, NumPy, Matplotlib, Seaborn</span></li>
+
+<li class="d-flex"><span>Interest:</span> <span>Acting, Theatre, Yakshagana, Event Organization & Cultural Activities</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects Built, More to Explore</span>
+								</p>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p><p>
+    Final-year Information Science Engineering student with strong skills in
+    Python, SQL, Power BI, Excel, Pandas, NumPy, Matplotlib, and Seaborn.
+    Passionate about Data Analytics, Data Science, Artificial Intelligence, and
+    Software Development. Experienced in building data-driven projects, analyzing
+    complex datasets, and creating insightful visualizations to support
+    decision-making. A quick learner with strong problem-solving abilities,
+    adaptability, and a continuous desire to learn emerging technologies.
+    Open to opportunities in Data Analytics, Data Science, AI/ML, and Software
+    Development roles.
+</p></p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">August-2025</span>
+						<h2>Deloitte Data Analyst Job Simulation</h2>
+						<span class="position">Forage</span>
+						 <ul>
+        <li>Completed a data analytics simulation involving data cleaning, analysis, and business problem solving.</li>
+        <li>Created interactive dashboards and visualizations to identify key business insights.</li>
+        <li>Analyzed datasets using Excel and data analytics techniques to support decision-making.</li>
+        <li>Prepared reports and presented findings through clear and actionable visualizations.</li>
+    </ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb 2026-May 2026</span>
+						<h2>Web Developer Intern</h2>
+						<span class="position">PAT Technologies</span>
+						<p <ul>
+        <li>Completed training in HTML, CSS, JavaScript, PHP, MySQL, Python, and React fundamentals.</li>
+        <li>Developed an HR Management System with employee management, attendance tracking, leave management, and authentication features.</li>
+        <li>Worked on front-end and back-end development, database integration, and responsive web design.</li>
+        <li>Gained hands-on experience in full-stack web development and software project implementation.</li>
+    </ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2024</span>
+    					<h2>Bachelor of Engineering</h2>
+						<h6>Dayanada Sagar Academy Of Technology And Management</h6>
+    					<span class="position">Visvesvaraya Technological University</span>
+    					<p class="mt-4">CGPA: 8.94/10</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2022</span>
+    					<h2>Pre University Education</h2>
+    					<span class="position">SDM</span>
+    					<p class="mt-4">Percentage: 95.33</p>
+    				</div>
+				</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020</span>
+    					<h2>Secondary School Education</h2>
+    					<span class="position">New English School</span>
+    					<p class="mt-4">Percentage: 91.52</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1M5EdSRMPAVlEnKJ9jYyNtMkXIoHPpD9r/view?usp=sharing" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics and Front-end Projects</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Shetty-ANANYA-Raju/Exoplanet-Exploration" class="block-20 zoom-effect" style="background-image: url('images/exo.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Shetty-ANANYA-Raju/Exoplanet-Exploration">Exoplanet Exploration</a></h3>
+                <p> Developed a responsive web application that enables users to explore and
+    discover information about exoplanets beyond our solar system. Integrated
+    NASA-inspired astronomical data with dynamic search and filtering features
+    to provide an engaging learning experience. Designed an intuitive user
+    interface with interactive components and responsive layouts, making space
+    exploration accessible to students, researchers, and astronomy enthusiasts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Shetty-ANANYA-Raju/Sales_Insight_Analysis/tree/main" class="block-20 zoom-effect" style="background-image: url('images/sales.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Shetty-ANANYA-Raju/Sales_Insight_Analysis/tree/main">Revenue Intelligence Dashboard</a></h3>
+                <p>Designed and developed an interactive Power BI dashboard to analyze sales
+    performance, revenue trends, and market-wise business metrics for AtliQ
+    Hardware. Utilized SQL and MySQL for data extraction, cleaning, and
+    transformation, enabling comprehensive business analysis. Identified key
+    revenue drivers, top-performing markets, and sales opportunities through
+    dynamic visualizations and KPI tracking. Generated actionable insights
+    projected to support a 7% increase in quarterly revenue through data-driven
+    decision-making.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Shetty-ANANYA-Raju/Customer_Shopping_Behaviour_Analysis/tree/main" class="block-20 zoom-effect" style="background-image: url('images/customer.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Shetty-ANANYA-Raju/Customer_Shopping_Behaviour_Analysis/tree/main">Customer Behavior Analytics Dashboard</a></h3>
+                <p> Developed an interactive analytics dashboard to examine customer purchasing
+    behavior, spending patterns, and demographic trends. Leveraged Python
+    (Pandas) and SQL for data cleaning, exploration, and segmentation to
+    identify high-value customer groups and key revenue drivers. Delivered
+    actionable insights that supported targeted marketing campaigns, customer
+    retention strategies, and data-driven business decisions through intuitive
+    visualizations and performance metrics.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Shetty-ANANYA-Raju/-Supply-Chain-Analytics-Dashboard/tree/main" class="block-20 zoom-effect" style="background-image: url('images/supply.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Shetty-ANANYA-Raju/-Supply-Chain-Analytics-Dashboard/tree/main">Supply Chain Analytics Dashboard</a></h3>
+				  <p>  Built a comprehensive Power BI dashboard to monitor inventory, logistics,
+    and transportation performance across the supply chain. Analyzed over
+    5.77L+ revenue and 46K+ sales records to identify regional performance
+    trends, delivery lead times, and operational bottlenecks. Implemented
+    automated reporting and interactive visualizations, reducing manual
+    reporting effort by 15% and enabling data-driven decisions to improve
+    operational efficiency.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/Shetty-ANANYA-Raju/NutriVista" class="block-20 zoom-effect" style="background-image: url('images/nutri.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/Shetty-ANANYA-Raju/NutriVista">NutriVista – Nutrition & Wellness Platform</a></h3>
+				  <p> Developed a responsive web application focused on nutrition awareness and
+    healthy lifestyle management. Designed an intuitive user interface that
+    allows users to explore nutritional information, health tips, and dietary
+    recommendations. Implemented interactive features, modern UI components,
+    and responsive layouts to deliver a seamless user experience across devices.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+<div class="row justify-content-center mb-5 pb-3">
+    <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Activities</h1>
+        <h2 class="mb-4">Extracarricular And Achievement</h2>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-lg-4 col-md-6 d-flex">
+        <div class="resume-wrap ftco-animate w-100">
+            <h2>Brain Mine Club</h2>
+            <p>
+                Active member involved in organizing technical workshops,
+                events, and student engagement activities.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 d-flex">
+        <div class="resume-wrap ftco-animate w-100">
+            <h2>Sahayana</h2>
+            <p>
+                Participated in drama skits, stage performances, and cultural
+                programs, enhancing communication and teamwork skills.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 d-flex">
+        <div class="resume-wrap ftco-animate w-100">
+            <h2>Yaksha Kireeta</h2>
+            <p>
+                Performed in 10+ Yakshagana shows, contributing to the promotion
+                of Karnataka's traditional art and culture.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 d-flex">
+        <div class="resume-wrap ftco-animate w-100">
+            <h2>NASA Space Apps Challenge</h2>
+            <p>
+                Participated in an international hackathon, collaborating on
+                innovative technology solutions for real-world challenges.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 d-flex">
+        <div class="resume-wrap ftco-animate w-100">
+            <h2>Fusion Techathon</h2>
+            <p>
+                Competed in a team-based innovation challenge, developing
+                creative solutions through technology and problem-solving.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 d-flex">
+        <div class="resume-wrap ftco-animate w-100">
+            <h2>Achievement</h2>
+            <p>
+                Secured <strong>3rd Place</strong> in the Science Forum Idea
+                Presentation Competition for presenting <strong>Wonder Areca Spray</strong>,
+                an agritech innovation designed to improve spraying efficiency,
+                reduce manual effort, and support arecanut farmers.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<section class="ftco-section" id="certification-section">
+    <div class="container">
+
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Certifications</h1>
+                <h2 class="mb-4">Certifications</h2>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 d-flex">
+                <div class="resume-wrap ftco-animate w-100">
+                    <h2>Deloitte Data Analyst Job Simulation</h2>
+                    <p>
+                        Completed Deloitte's Data Analytics Virtual Experience Program on Forage,
+                        gaining hands-on experience in data cleaning, analysis, visualization,
+                        dashboard creation, and business problem-solving.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 d-flex">
+                <div class="resume-wrap ftco-animate w-100">
+                    <h2>The Complete 2024 Web Development Bootcamp</h2>
+                    <p>
+                        Successfully completed Angela Yu's Web Development Bootcamp,
+                        covering HTML, CSS, JavaScript, Node.js, Express.js,
+                        databases, APIs, and full-stack web development concepts.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Bengaluru, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 9482604199</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">ananya.rshetty4199@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1M5EdSRMPAVlEnKJ9jYyNtMkXIoHPpD9r/view?usp=sharing">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+    <h2>Interested in Working Together?</h2>
+    <p>
+        Feel free to reach out regarding internships, full-time opportunities,
+        collaborations, or project discussions.
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1sV7mPgKmcyQDUZllqBKp3FchV3u_1eVzE3zEpX1ysBKUGA/viewform?usp=publish-editor"
+       target="_blank"
+       class="btn btn-primary py-3 px-5">
+       Get In Touch - Google Form 
+    </a>
+</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/ananya-r-shetty-240919268/"><span class="icon-linkedin"></span></a></li>  
+					  
+					  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/ananyashetty24/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
